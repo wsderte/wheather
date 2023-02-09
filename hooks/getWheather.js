@@ -32,11 +32,11 @@ export const useGetWheather = ({ location }) => {
     async function getData() {
         const res = await fetch(url, { method: 'GET', compress: true })
         const data = await res.json()
-        console.log('bebraaaaaaaaaaaaaaaaaaaa')
+        console.log('useGetWheather get Data')
         setdata(data)
     }
 
-    console.log('bebra')
+    console.log('useGetWheather')
     useEffect(() => {
         console.log('use effect run')
         getData()

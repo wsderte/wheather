@@ -7,8 +7,12 @@ export const Navbar = () => {
                 <h1>Ascella Wheater</h1>
             </div>
 
-            <Link href="/">Home</Link>
-            <Link href="/menu">Menu</Link>
+            <Link href="/">
+                <a>Home</a>
+            </Link>
+            <Link href="/menu">
+                <a>Menu</a>
+            </Link>
         </nav>
     )
 }

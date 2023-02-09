@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react'
 import { useGetCurrentLocation } from '../../hooks/getCurrentLocation'
 import { useGetWheather } from '../../hooks/getWheather'
 
@@ -8,7 +7,8 @@ export const getStaticProps = async () => {
 
     const res = await fetch(url, { method: 'GET', compress: true })
     const data = await res.json()
-    console.log('BEBRA')
+
+    console.log('Static Props')
     return {
         props: { Data: data },
     }
@@ -22,6 +22,10 @@ export default function Test({ Data }) {
         data?.data?.data?.timelines[0]?.intervals[0]?.values?.temperature
     console.log(temperature)
     console.log(data)
+    // console.log(
+    //     Data.data.timelines[0].intervals[0].values.temperature,
+    //     ' DATA STORE'
+    // )
 
     return (
         <div>

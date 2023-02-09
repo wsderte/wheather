@@ -8,23 +8,19 @@ const NotFound = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             router.push('/')
-        }, 5000)
+        }, 10000)
+
         return () => {
             clearTimeout(timer)
         }
     })
 
     return (
-        <div>
+        <div className="not-found">
             <h1>Something went wrong</h1>
             <p>
                 <Link href="/">
-                    <a>Homepage</a>
-                </Link>
-            </p>
-            <p>
-                <Link href="/menu">
-                    <a>Wheather</a>
+                    <a>Go back to the Homepage</a>
                 </Link>
             </p>
         </div>
