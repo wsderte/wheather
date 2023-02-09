@@ -9,7 +9,6 @@ const NotFound = () => {
         const timer = setTimeout(() => {
             router.push('/')
         }, 5000)
-        //2
         return () => {
             clearTimeout(timer)
         }
